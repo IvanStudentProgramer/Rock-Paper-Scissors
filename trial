@@ -1,0 +1,29 @@
+import random
+#ROCK PAPER SCISSORS
+nickname = (input('Enter your nickname: '))
+WORDS = ["Rock", "Paper", "Scissors"]
+
+while True:
+    player_1 = str(input('Pick your weapon! - Rock, Paper, Scissors, Exit: '))
+    player_2 = word = random.choice(WORDS)
+
+    if player_1 != "Rock" and player_1 != "Paper" and player_1 != "Scissors" and player_1 != "Exit":
+        print(player_1 + ' is not a valid weapon!')
+
+    if player_1 == player_2:
+        print(f'{nickname} you picked - {player_1}. It\'s a tie! Computer - {player_2}\nPick another weapon!')
+    elif player_1 == 'Rock' and player_2 == 'Paper':
+        print(f'{nickname} lose! Computer - {player_2}\nPick another weapon!')
+    elif player_1 == 'Rock' and player_2 == 'Scissors':
+        print(f'{nickname} wins! Computer - {player_2}\nPick another weapon!')
+    elif player_1 == 'Paper' and player_2 == 'Scissors':
+        print(f'{nickname} lose! Computer - {player_2}\nPick another weapon!')
+    elif player_1 == 'Paper' and player_2 == 'Rock':
+        print(f'{nickname} wins! Computer - {player_2}\nPick another weapon!')
+    elif player_1 == 'Scissors' and player_2 == 'Rock':
+        print(f'{nickname} lose! Computer - {player_2}\nPick another weapon!')
+    elif player_1 == 'Scissors' and player_2 == 'Paper':
+        print(f'{nickname} wins! Computer - {player_2}\nPick another weapon!')
+    elif player_1 == "Exit":
+        print('THANK YOU FOR PLAYING!\n     GAME OVER')
+        exit()
